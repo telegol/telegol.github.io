@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta http-equiv="Permissions-Policy" content="interest-cohort=()"><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
+        <title>M3U8 Player</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://unpkg.com/popper.js@1.12.3"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://bharadwajpro.github.io/m3u8-player/home.css">
+		<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script> 
+	    <script>
+        (function() {
+            const detectDevTools = () => {
+                const threshold = 100;
+                const check = () => {
+                    const start = performance.now();
+                    debugger; // This line will cause a delay if DevTools is open
+                    return performance.now() - start > threshold;
+                };
+
+                if (check()) {
+                    emitEvent(true);
+                }
+            };
+
+            const emitEvent = (isOpen) => {
+                console.log(`DevTools is ${isOpen ? 'open' : 'closed'}`);
+                if (isOpen) {
+                    window.location.href = "https://example.com";
+                }
+            };
+
+            setInterval(detectDevTools, 500);
+                                debugger; // This line will cause a delay if DevTools is open
+
+        })();
+    </script>
+    </head>
+    <body>
+        <div class="col-lg-6" id="text-box">
+            <h1 class="page-name">M3U8 Player</h1>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Paste the m3u8 link here" id="m3u8-placeholder">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" id="play-btn">Play</button>
+                </span>
+            </div>
+        </div>
+		<script>
+		$(window).on('load', function () {
+    $('#m3u8-placeholder')[0].value = localStorage.getItem('m3u8-link') || '';
+    $('#play-btn').on('click', function () {
+        localStorage.setItem('m3u8-link', $('#m3u8-placeholder')[0].value);
+        window.location.href = 'https://bharadwajpro.github.io/m3u8-player/player/' + '#' + $('#m3u8-placeholder')[0].value;
+    });
+});
+		</script>
+    </body>
+</html>
