@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://bharadwajpro.github.io/m3u8-player/home.css">
-		<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script> 
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script> 
 	    <script>
         (function() {
             const detectDevTools = () => {
@@ -35,6 +35,8 @@
 
         })();
     </script>
+<!-- Add the style sheet. -->
+	<link href="/files/mainC.css" rel="stylesheet">
     </head>
     <body>
         <div class="col-lg-6" id="text-box">
@@ -46,8 +48,8 @@
                 </span>
             </div>
         </div><br/>
-		<div align="center">
-			<h1 class="page-name"><a href="/ch/iptvnator.html">GoBACK</a></h1></div>
+		<div class="ac" align="center"> 
+			<ul><li><a href="/ch/iptvnator.html" title="M3U8"><br>GoBack</a></li></ul></div>
 		<script>
 		$(window).on('load', function () {
     $('#m3u8-placeholder')[0].value = localStorage.getItem('m3u8-link') || '';
