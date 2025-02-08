@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><meta http-equiv="Permissions-Policy" content="interest-cohort=()"><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C O O L</title>
+<!-- Add the style sheet. -->
+<link id="theme" rel="stylesheet" type="text/css" href="/files/cool.css" />
+<link href="/files/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script> 
+	    <script>
+        (function() {
+            const detectDevTools = () => {
+                const threshold = 100;
+                const check = () => {
+                    const start = performance.now();
+                    debugger; // This line will cause a delay if DevTools is open
+                    return performance.now() - start > threshold;
+                };
+
+                if (check()) {
+                    emitEvent(true);
+                }
+            };
+
+            const emitEvent = (isOpen) => {
+                console.log(`DevTools is ${isOpen ? 'open' : 'closed'}`);
+                if (isOpen) {
+                    window.location.href = "https://example.com";
+                }
+            };
+
+            setInterval(detectDevTools, 500);
+                                debugger; // This line will cause a delay if DevTools is open
+
+        })();
+    </script>
+		<style>
+	/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #E8C300 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff0186;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+span.i {
+  color: #888664; font-family: "DejaVu Sans", "Trebuchet MS";
+  font-size:240%; letter-spacing:2px; padding-top: 1px; align-content: stretch;
+}
+				#popup{
+    display: none;
+}
+.popup-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(48,45,45,1.00 / 70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.popup{
+    background-color: #333333;
+    padding: 5px 10px;
+    width: 75%;
+    border-radius: 5px;
+}
+.close-popup{
+    display: flex;
+    justify-content: flex-end;
+	text-align: center;
+}
+.close-popup a{
+    font-size: 1.2rem;
+    background-color: #FF2CB5;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: normal;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+}
+.popup > h2{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.popup > p{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.popup-btn{
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid rebeccapurple;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 10px 0px;
+    transition: .2s all ease-in;
+}
+.popup-btn:hover{
+    background-color: rebeccapurple;
+    color: #fff;
+}
+span {
+  color: #262626; font-family: "DejaVu Sans", "Trebuchet MS";
+  font-size:100%; letter-spacing:1px; padding-top: 1px; align-content: stretch;
+}
+							.overlay {
+        position: absolute;
+        left: 10px; /* Position adjusted to the top left corner */
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+}
+		#myIframe {
+  position: relative; 
+  z-index: 0;
+}
+		.main {
+	width: 100%;
+	height: 100vh;
+	padding: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #00000050;
+	flex-direction: column;
+	opacity: 1;
+}
+
+#da,.fs-btn{
+        width: 104px; /* Reduced width from 160px to 104px */
+        height: 40px; /* Reduced height from 80px to 40px */
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+}
+.ab {
+	width: 100%;
+    height: 100%;
+	border-color: #262626;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+.fs-btn:hover{
+	background-color: #000000;
+	color:white;
+	border: 1px solid white;
+}
+#da:hover{
+	color:white;
+	border: 1px solid white;
+}
+.button-bar{
+	
+} 	
+	</style>
+</head>
+<body><div class="overlay">
+				<div class="button-bar">
+					<button id="da">Disabled Ads</button><br/><button class="fs-btn" onclick="toggleFullscreen()">[ O ]</button>
+					<div class="close-popup" id="closeBtn"></div>			
+			</div>
+				</div>
+	    <div id="popup">
+        <div class="popup-container">
+            <div class="popup"> 
+	<div class="ac">
+<div style="position: relative;padding-bottom: 56.25%; padding-top: 0px; height: 0;"><iframe name="github" id="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="" scrolling="no" allow="autoplay" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div></div></div>
+		</div></div><br/>
+	<div class="ac">	<button id="clickBtn">
+	<div id="channels" class="content">
+	<ul><li><a href="https://p2plive3.top/stream/live/setanta1.html" target="_blank" onClick="window.open('https://p2plive3.top/stream/live/setanta1.html','match-S1','resizable,width=680,height=380'); return false;" title="Setanta 1" class="tele2" >
+	 <i class="icon tele2_character"></i><br><br><span class="i">&#48;&#49;</span></a></li>	
+		<li><a href="https://p2plive3.top/stream/live/setanta2.html" target="_blank" onClick="window.open('https://p2plive3.top/stream/live/setanta2.html','match-S2','resizable,width=680,height=380'); return false;" title="Setanta 2" class="tele3" >
+	 <i class="icon tele3_character"></i><br><br><span class="i">&#48;&#50;</span></a></li>	
+		<li><a href="https://p2plive3.top/stream/live/setantakz.html" target="_blank" onClick="window.open('https://p2plive3.top/stream/live/setantakz.html','match-KZ','resizable,width=680,height=380'); return false;" title="Setanta KZ" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#48;&#51;</span></a></li>
+		<li><a href="https://p2plive2.top/stream/live/m1.html" target="_blank" onClick="window.open('https://p2plive2.top/stream/live/m1.html','match-F1','resizable,width=680,height=380'); return false;" title="Match Football 1" class="tvzov" >
+	 <i class="icon tvzov_character"></i><br><br><span class="i">&#48;&#52;</span></a></li>
+		<li><a href="https://p2plive2.top/stream/live/m2.html" target="_blank" onClick="window.open('https://p2plive2.top/stream/live/m2.html','match-F2','resizable,width=680,height=380'); return false;" title="Match Football 2" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#48;&#53;</span></a></li>
+		<li><a href="https://p2plive2.top/stream/live/m3.html" target="_blank" onClick="window.open('https://p2plive2.top/stream/live/m3.html','match-F3','resizable,width=680,height=380'); return false;" title="Match Football 3"  class="telezov" >
+	 <i class="icon telezov_character"></i><br><br><span class="i">&#48;&#54;</span></a></li>
+		<li><a href="https://p2plive2.top/stream/live/mp.html" target="_blank" onClick="window.open('https://p2plive2.top/stream/live/mp.html','match-tv','resizable,width=680,height=380'); return false;" title="VIA МАТЧ! Premier" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#48;&#55;</span></a></li>
+		<li><a href="https://p2plive2.top/stream/live/match.html" target="_blank" onClick="window.open('https://p2plive2.top/stream/live/match.html','match-tv','resizable,width=680,height=380'); return false;" title="VIA МАТЧ! TB1" class="zovtv" >
+	 <i class="icon zovtv_character"></i><br><br><span class="i">&#48;&#56;</span></a></li>
+	    <li><a href="https://federal.tv/tv/match-tv/player/default" target="_blank" onClick="window.open('https://federal.tv/tv/match-tv/player/default','match-tv','resizable,width=680,height=380'); return false;" title="VIA МАТЧ! TB2" class="tele1" >
+	 <i class="icon tele1_character"></i><br><br><span class="i">&#48;&#57;</span></a></li>
+	    <li><a href="https://p2plive3.top/stream/live/boyets.html" target="_blank" onClick="window.open('https://p2plive3.top/stream/live/boyets.html','match-B','resizable,width=680,height=380'); return false;" title="VIA МАТЧ! Боец"  class="telezov" >
+	 <i class="icon telezov_character"></i><br><br><span class="i">&#49;&#48;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/PremierSports1[UK]" title="VIA PLAY SPORTS 1" class="tele2" >
+	 <i class="icon tele2_character"></i><br><br><span class="i">&#49;&#49;</span></a></li>	
+		<li><a target="github" href="https://topembed.pw/channel/PremierSports2[UK]" title="VIA PLAY SPORTS 2" class="tele3" >
+	 <i class="icon tele3_character"></i><br><br><span class="i">&#49;&#50;</span></a></li>	
+		<li><a target="github" href="https://topembed.pw/channel/DAZN1Deutschland[Germany]" title="DAZN 1 DE" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#49;&#51;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/DAZN1[Spain]" title="DAZN 1 ES" class="tvzov" >
+	 <i class="icon tvzov_character"></i><br><br><span class="i">&#49;&#52;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/DAZN2[Spain]" title="DAZN 2 ES" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#49;&#53;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/DAZN2Deutschland[Germany]" title="DAZN 2 DE"  class="telezov" >
+	 <i class="icon telezov_character"></i><br><br><span class="i">&#49;&#54;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/DAZN1UK[UK]" title="DAZN 1 UK" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#49;&#55;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/FoxSoccerPlus[USA]" title="FOX SOCCER PLUS" class="zovtv" >
+	 <i class="icon zovtv_character"></i><br><br><span class="i">&#49;&#56;</span></a></li>
+	    <li><a target="github" href="https://topembed.pw/channel/TNTSports1[UK]" title="TNT SPORTS 1" class="tele1" >
+	 <i class="icon tele1_character"></i><br><br><span class="i">&#49;&#57;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/TNTSports2[UK]" title="TNT SPORTS 2" class="tele2" >
+	 <i class="icon tele2_character"></i><br><br><span class="i">&#50;&#48;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/TNTSports3[UK]" title="TNT SPORTS 3" class="tele3" >
+	 <i class="icon tele3_character"></i><br><br><span class="i">&#50;&#49;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/TNTSports4[UK]" title="TNT SPORTS 4" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#50;&#50;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/ESPN[USA]" title="ESPN PREMIUM" class="tvzov" >
+	 <i class="icon tvzov_character"></i><br><br><span class="i">&#50;&#51;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/ESPNDeportes[USA]" title="ESPN DEPORTES" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#50;&#52;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/SkySportsPremierLeague[UK]" title="SKY SPORTS EPL"  class="telezov" >
+	 <i class="icon telezov_character"></i><br><br><span class="i">&#50;&#53;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/DAZN1UK[UK]" title="Bellator MMA" class="tele1" >
+	 <i class="icon tele1_character"></i><br><br><span class="i">&#50;&#54;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/SuperSportAction[SouthAfrica]" title="SUPERSPORT ACTION" class="tele2" >
+	 <i class="icon tele2_character"></i><br><br><span class="i">&#50;&#55;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/ESPN[Argentina]" title="ESNP ARGENTINA" class="tele3" >
+	 <i class="icon tele3_character"></i><br><br><span class="i">&#50;&#56;</span></a></li>
+		<li><a target="github" href="https://p2plive3.top/stream/live/khlprime.html" title="KHL PRIME" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#50;&#57;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/SkySportsF1[UK]" title="SKY SPORTS F1" class="tvzov" >
+	 <i class="icon tvzov_character"></i><br><br><span class="i">&#51;&#48;</span></a></li>
+		<li><a target="github" href="https://p2plive3.top/stream/live/khl.html" title="KHL Sports" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#51;&#49;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/LaLigaTV[UK]" title="LaLiga TV"  class="telezov" >
+	 <i class="icon telezov_character"></i><br><br><span class="i">&#51;&#50;</span></a></li>
+        <li><a target="github" href="https://topembed.pw/channel/SuperSportLaLiga[SouthAfrica]" title="SuperSport Laliga" class="tele1" >
+	 <i class="icon tele1_character"></i><br><br><span class="i">&#51;&#51;</span></a></li>
+		<li><a href="https://venoms-live.top/p2p/live/10tka6.html" target="_blank" onClick="window.open('https://venoms-live.top/p2p/live/10tka6.html','gol-tv','resizable,width=680,height=380'); return false;" title="CANAL1 SPORT" class="tele2" >
+	 <i class="icon tele2_character"></i><br><br><span class="i">&#51;&#52;</span></a></li>
+		<li><a target="github" href="https://topembed.pw/channel/DirecTVSports[Argentina]" title="CANAL+ SOCCER" class="tele3" >
+	 <i class="icon tele3_character"></i><br><br><span class="i">&#51;&#53;</span></a></li>
+		<li><a href="https://p2plive2.top/stream/live/kazsport.html?autoplay=1" target="_blank" onClick="window.open('https://p2plive2.top/stream/live/kazsport.html?autoplay=1','QAZ-tv','resizable,width=680,height=380'); return false;" title="SUPERQAZ" class="tvzov" >
+	 <i class="icon tvzov_character"></i><br><br><span class="i">&#51;&#54;</span></a></li>
+		<li><a href="https://venoms-live.top/p2p/live/10tka5.html" target="_blank" onClick="window.open('https://venoms-live.top/p2p/live/10tka5.html','match-tv','resizable,width=680,height=380'); return false;" title="OKKO 1" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#51;&#55;</span></a></li>
+		<li><a href="https://p2plive3.top/stream/live/okko.html" target="_blank" onClick="window.open('https://p2plive3.top/stream/live/okko.html','okko1-tv','resizable,width=680,height=380'); return false;" title="OKKO 2"  class="telezov" >
+	 <i class="icon telezov_character"></i><br><br><span class="i">&#51;&#56;</span></a></li>
+        <li><a href="//ok.ru/videoembed/8940377546295?nochat=1&autoplay=1" target="_blank" onClick="window.open('//ok.ru/videoembed/8940377546295?nochat=1&autoplay=1','okko2','resizable,width=680,height=380'); return false;" title="PLAY Variety 2" class="tele1" >
+	 <i class="icon tele1_character"></i><br><br><span class="i">&#51;&#57;</span></a></li>
+        <li><a href="//ok.ru/videoembed/8940377546295?nochat=1&autoplay=1" title="UDAR" class="zov" >
+	 <i class="icon zov_character"></i><br><br><span class="i">&#52;&#48;</span></a></li></ul>
+		</div></button></div>
+				<script>
+const iframe = document.getElementById('myIframe');
+const main = document.getElementById('main');
+function toggleFullscreen() {
+	if (!document.fullscreenElement) {
+		// If the iframe is not currently in fullscreen mode, go fullscreen
+		iframe.requestFullscreen().catch((err) => {
+			console.error('Error attempting to enable fullscreen:', err);
+		});
+	} else {
+		// If the iframe is currently in fullscreen mode, exit fullscreen
+		document.exitFullscreen();
+	}
+}
+const da = document.getElementById('da');
+da.addEventListener('click', function () {
+	if (iframe.classList[0] !== 'ab') {
+		iframe.classList.add('ab');
+		da.innerHTML = 'Enabled ads';
+		da.style.backgroundColor = 'red';
+	} else {
+		iframe.classList.remove('ab');
+		da.innerHTML = 'Disabled ads';
+		da.style.backgroundColor = 'green';
+	}
+});
+
+</script>
+				<script>
+		const clickBtn = document.getElementById("clickBtn");
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closeBtn");
+
+clickBtn.addEventListener('click', ()=>{
+    popup.style.display = 'block';
+});
+closeBtn.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+});
+popup.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+});
+		</script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-252111126-1"></script>
+<script>function gtag() {
+        dataLayer.push(arguments)
+    }
+
+    window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-252111126-1")</script>
+</body>
+</html>
