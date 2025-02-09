@@ -77,7 +77,9 @@ span.i {
     left: 0;
 }
 .popup{
-    background-color: #333333;
+    background-color: #262626;
+	position: absolute;
+	padding-bottom: 56.25%;
     padding: 5px 10px;
     width: 75%;
     border-radius: 5px;
@@ -191,17 +193,11 @@ span {
 }	
 	</style>
 </head>
-<body><div class="overlay">
-				<div class="button-bar">
-					<button id="da">Disabled Ads</button><br/><button class="fs-btn" onclick="toggleFullscreen()">[ O ]</button>
-					<div class="close-popup" id="closeBtn"></div>			
-			</div>
-				</div>
+<body>
 	    <div id="popup">
         <div class="popup-container">
             <div class="popup"> 
-
-<div style="position: relative;padding-bottom: 56.25%; padding-top: 0px; height: 0;"><iframe name="github" id="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="" scrolling="no" allow="autoplay" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div></div></div></div><br/><br/>
+<iframe name="github" id="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="" scrolling="no" allow="autoplay" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div></div></div><br/><br/>
 	<div class="ac">
 		<button id="clickBtn" class="clickBtn"><div class="container">
 	<div id="channels" class="content">
@@ -286,6 +282,7 @@ span {
         <li><a href="//ok.ru/videoembed/8940377546295?nochat=1&autoplay=1" title="UDAR" class="zov" >
 	 <i class="icon zov_character"></i><br><br><span class="i">&#52;&#48;</span></a></li></ul>
 		</div></div></button></div>
+	<div class="close-popup" id="closeBtn"><a target="github" href="#">[ X ]</a></div>
 				<script>
 const iframe = document.getElementById('myIframe');
 const main = document.getElementById('main');
