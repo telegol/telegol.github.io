@@ -61,149 +61,11 @@ span.i {
   color: #888664; font-family: "DejaVu Sans", "Trebuchet MS";
   font-size:240%; letter-spacing:2px; padding-top: 1px; align-content: stretch;
 }
-#popup{
-    display: none;
-}
-.popup-container{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(48,45,45,1.00 / 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.popup{
-    background-color: #262626;
-	position: absolute;
-    padding: 5px 10px;
-    width: 75%;
-    border-radius: 5px;
-}
-.close-popup{
-    display: flex;
-    justify-content: flex-end;
-	text-align: center;
-}
-.close-popup a{
-    font-size: 1.2rem;
-    background-color: #FF2CB5;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: normal;
-    text-decoration: none;
-    border-radius: 10px;
-    display: inline-block;
-}
-.popup > h2{
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-}
-.popup > p{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-.popup-btn{
-    display: inline-block;
-    text-decoration: none;
-    border: 2px solid rebeccapurple;
-    padding: 5px 15px;
-    border-radius: 20px;
-    margin: 10px 0px;
-    transition: .2s all ease-in;
-}
-.popup-btn:hover{
-    background-color: rebeccapurple;
-    color: #fff;
-}
-span {
-  color: #262626; font-family: "DejaVu Sans", "Trebuchet MS";
-  font-size:100%; letter-spacing:1px; padding-top: 1px; align-content: stretch;
-}
-							.overlay {
-        position: absolute;
-        left: 10px; /* Position adjusted to the top left corner */
-        top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-}
-		#myIframe {
-  position: relative; 
-  z-index: 0;
-}
-		.main {
-	width: 100%;
-	height: 100vh;
-	padding: 5%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #00000050;
-	flex-direction: column;
-	opacity: 1;
-}
-
-#da,.fs-btn{
-        width: 104px; /* Reduced width from 160px to 104px */
-        height: 40px; /* Reduced height from 80px to 40px */
-        background: rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-}
-.ab {
-	width: 100%;
-    height: 100%;
-	border-color: #262626;
-	cursor: not-allowed;
-	pointer-events: none;
-}
-.fs-btn:hover{
-	background-color: #000000;
-	color:white;
-	border: 1px solid white;
-}
-#da:hover{
-	color:white;
-	border: 1px solid white;
-}
-.button-bar{
-	
-} 	
-	.link {
-  background-color: #262626;
-  border: 0px;
-  padding: 0px;
-	text-decoration: none;
-  text-align: center;
-}		
-.container {
-	  background-color: #262626;
-  border: 0px;
-  padding: 0px;
-  text-decoration: none;
-}	
 	</style>
 </head>
-<body><div class="close-popup" id="closeBtn"></div>
-	    <div id="popup">
-        <div class="popup-container">
-            <div class="popup">
-<div style="position: relative;padding-bottom: 56.25%; padding-top: 0px; height: 0;"><iframe name="github" id="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="" scrolling="no" allow="autoplay" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div></div></div></div><br/><br/>
+<body><div class="ac">
+<div style="position: relative;padding-bottom: 56.25%; padding-top: 0px; height: 0;"><iframe name="github" id="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="" scrolling="no" allow="autoplay" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div></div><br/>
 	<div class="ac">
-		<button id="clickBtn" class="container">
 	<div id="channels" class="content">
 	<ul><li><a href="https://p2plive3.top/stream/live/setanta1.html" target="_blank" onClick="window.open('https://p2plive3.top/stream/live/setanta1.html','match-S1','resizable,width=680,height=380'); return false;" title="Setanta 1" class="tele2" >
 	 <i class="icon tele2_character"></i><br><br><span class="i">&#48;&#49;</span></a></li>
@@ -285,7 +147,7 @@ span {
 	 <i class="icon tele1_character"></i><br><br><span class="i">&#51;&#57;</span></a></li>
         <li><a href="//ok.ru/videoembed/8940377546295?nochat=1&autoplay=1" title="UDAR" class="zov" >
 	 <i class="icon zov_character"></i><br><br><span class="i">&#52;&#48;</span></a></li></ul>
-		</div></button></div>
+		</div></div>
 	
 				<script>
 const iframe = document.getElementById('myIframe');
@@ -315,21 +177,6 @@ da.addEventListener('click', function () {
 });
 
 </script>
-				<script>
-		const clickBtn = document.getElementById("clickBtn");
-const popup = document.getElementById("popup");
-const closeBtn = document.getElementById("closeBtn");
-
-clickBtn.addEventListener('click', ()=>{
-    popup.style.display = 'block';
-});
-closeBtn.addEventListener('click', ()=>{
-    popup.style.display = 'none';
-});
-popup.addEventListener('click', ()=>{
-    popup.style.display = 'none';
-});
-		</script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
