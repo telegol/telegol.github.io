@@ -10,13 +10,6 @@ h1,
 h2 {
   text-align: center;
 }
-.ac {
-    background: #;
-    margin: 0 auto;
-    padding: 0 0px;
-    /*position: relative;*/
-    width: 1054px;
-}
 #iframe-generator-form {
   max-width: 480px;
   margin: 0 auto;
