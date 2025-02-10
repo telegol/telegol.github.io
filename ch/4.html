@@ -14,21 +14,5 @@ html,body{margin:0;padding:0;width:100%;height:100%;}
 </style>
  
       <div id="playerjs" style="width:100%;height:100%;"></div><script>function PlayerjsAsync(){var player = new Playerjs({id:"player", file:r("aHR0cDovLzEzNS4xODEuMTE1LjgxOjgwMDAvcGxheS9hMDBmL2luZGV4Lm0zdTg/dG9rZW49bGl2ZXR2"), autoplay:1});}</script>  
-    <script type="text/javascript">
-            
-        var ps = location.href.substr(location.href.indexOf("html?")+5).split("&");
-            
-        var vs = {id:"playerjs", autoplay:"1",};
-
-        for(var i = 0; i<ps.length; i++){
-            var p = ps[i].substr(0,ps[i].indexOf("="));
-            var v = ps[i].substr(ps[i].indexOf("=")+1);
-            if(p!=v){
-                vs[p] = decodeURIComponent(v);
-            }
-        }
-            
-        var playerjs = new Playerjs(vs);  
-    </script>
 </body>
 </html>
