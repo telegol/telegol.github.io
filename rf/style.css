@@ -68,7 +68,9 @@ button:hover {
 #iframe-container {
   max-width: 100%;
   overflow: auto;
-  margin: 10px auto;
+  margin: 4px auto;
+  position: relative;
+  align-self: center;
   padding: 10px;
   background-color: #262626;
   border-radius: 4px;
