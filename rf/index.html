@@ -36,6 +36,65 @@
         })();
     </script>
 		<style>
+						.overlay {
+        position: absolute;
+        right: 16px; /* Position adjusted to the top right corner */
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+}
+		#myIframe {
+  position: relative; 
+  z-index: 0;
+}
+		.main {
+	width: 100%;
+	height: 100vh;
+	padding: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #00000050;
+	flex-direction: column;
+	opacity: 1;
+}
+
+#da,.fs-btn{
+        width: 100px; /* Reduced width from 160px to 100px */
+        height: 80px; /* Reduced height from 120px to 80px */
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+}
+.ab {
+	width: 100%;
+    height: 100%;
+	border-color: #262626;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+.fs-btn:hover{
+	background-color: #000000;
+	color:white;
+	border: 1px solid white;
+}
+#da:hover{
+	color:white;
+	border: 1px solid white;
+}
+.button-bar{
+	
+}
 	/* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
@@ -64,12 +123,72 @@ span.i {
 		span.i2 {
   color: #888664; font-family: "DejaVu Sans", "Trebuchet MS";
   font-size:120%; letter-spacing:1px; padding-top: 1px; align-content: stretch;
-}	
+}					#popup{
+    display: none;
+}
+.popup-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(48,45,45,1.00 / 70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.popup{
+    background-color: #333333;
+    padding: 5px 10px;
+    width: 75%;
+    border-radius: 5px;
+}
+.close-popup{
+    display: flex;
+    justify-content: flex-end;
+	text-align: center;
+}
+.close-popup a{
+    font-size: 1.2rem;
+    background-color: #FF2CB5;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: normal;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+}
+.popup > h2{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.popup > p{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.popup-btn{
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid rebeccapurple;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 10px 0px;
+    transition: .2s all ease-in;
+}
+.popup-btn:hover{
+    background-color: rebeccapurple;
+    color: #fff;
+}
 	</style>  
     <script src="script.js"></script>
   </head>
-  <body>
-	  <div class="ac">
+  <body><div class="overlay">
+				<div class="button-bar">
+					<button id="da">Disabled Ads</button><br/><button class="fs-btn" onclick="toggleFullscreen()">Fullscreen</button>
+					<div class="close-popup" id="closeBtn"><a target="github" href="#">[ X ]</a></div>
+			</div>
+				</div>
     <form id="iframe-generator-form">
       <label for="url-input">URL:</label>
       <input
@@ -83,16 +202,57 @@ span.i {
       <input type="number" id="width-input" value="480" min="1" required />
       <br>
       <label for="height-input">Height:</label>
-      <input type="number" id="height-input" value="270" min="1" required />
+      <input type="number" id="height-input" value="320" min="1" required />
       <br>
       <button type="submit">Generate Iframe</button>
-    </form></div>
+    </form>
 
-	<div id="iframe-container" class="ac"></div>
-
-	  <br/>
-<div style="padding-left: 20px">&nbsp;<a href="/rf/list" target="_blank" onClick="window.open('/rf/list.html','list','resizable,width=680,height=380'); return false;" title="list"><span class="i2">&nbsp;&#x25b6; LIST</span></a></div>
+		<div id="iframe-container" class="ac"></div><br/>
+<div class="ac">&nbsp;&nbsp;<a href="http://tvzov.byethost7.com/.vscode/list.html" target="_blank" onClick="window.open('http://tvzov.byethost7.com/.vscode/list.html','list','resizable,width=680,height=380'); return false;" title="list"><span class="i2">&nbsp;&#x25b6; LIST</span></a></div>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+				<script>
+const iframe = document.getElementById('myIframe');
+const main = document.getElementById('main');
+function toggleFullscreen() {
+	if (!document.fullscreenElement) {
+		// If the iframe is not currently in fullscreen mode, go fullscreen
+		iframe.requestFullscreen().catch((err) => {
+			console.error('Error attempting to enable fullscreen:', err);
+		});
+	} else {
+		// If the iframe is currently in fullscreen mode, exit fullscreen
+		document.exitFullscreen();
+	}
+}
+const da = document.getElementById('da');
+da.addEventListener('click', function () {
+	if (iframe.classList[0] !== 'ab') {
+		iframe.classList.add('ab');
+		da.innerHTML = 'Enabled ads';
+		da.style.backgroundColor = 'red';
+	} else {
+		iframe.classList.remove('ab');
+		da.innerHTML = 'Disabled ads';
+		da.style.backgroundColor = 'green';
+	}
+});
+
+</script>
+				<script>
+		const clickBtn = document.getElementById("clickBtn");
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closeBtn");
+
+clickBtn.addEventListener('click', ()=>{
+    popup.style.display = 'block';
+});
+closeBtn.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+});
+popup.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+});
+		</script>  
   </body>
 </html>
