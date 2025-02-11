@@ -74,15 +74,3 @@ button:hover {
   border-radius: 2px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-textarea {
-  display: block;
-  width: 100%;
-  max-width: 480px;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: none;
-}
