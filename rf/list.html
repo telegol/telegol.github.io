@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>List</title>
-	<link href="/files/favicon.ico" rel="icon" type="image/x-icon">
+	<link href="/files/favicon.ico" rel="icon" type="image/x-icon"><script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script> 
 	    <script>
@@ -52,6 +52,46 @@
         body {
             padding-top: 100px; /* Adjust for fixed header height */
         }
+			/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #E8C300 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff0186;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+span {
+  color: #262626; font-family: "DejaVu Sans", "Trebuchet MS";
+  font-size:100%; letter-spacing:1px; padding-top: 1px; align-content: stretch;
+}
+	.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: #262626;
+  padding: 01px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 0px;
+	text-decoration-color: antiquewhite;
+	text-decoration: none;
+  text-align: center;
+}	
     </style>
 </head>
 
@@ -61,8 +101,8 @@
                 <table class="w-full bg-white">
 					<thead>
                         <tr>
-                            <th class="py-2 px-4 bg-gray-200 text-gray-600">NAME</th>
-                            <th class="py-2 px-4 bg-gray-200 text-gray-600">EMBED CODE</th>
+                            <th class="py-2 px-4 bg-gray-200 text-gray-600">iFrame ONLY / WEB ONLY</th>
+                            <th class="py-2 px-4 bg-gray-200 text-gray-600">EMBED CODES</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,7 +198,7 @@
                                 </td>
                             </tr>
                                                                                 <tr class="hover:bg-gray-100">
-                                <td class="border px-4 py-2">TNTSports1[UK]</td>
+                                <td class="border px-4 py-2">TNTSports1[iFrame]</td>
                                 <td class="border px-4 py-2">
                                     <div class="flex items-center">
                                                                                 <input type="text" id="tvEmbed12" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://topembed.pw/channel/TNTSports1[UK]" readonly>
@@ -167,7 +207,7 @@
                                 </td>
                             </tr>
                                                                                 <tr class="hover:bg-gray-100">
-                                <td class="border px-4 py-2">TNTSports2[UK]</td>
+                                <td class="border px-4 py-2">TNTSports2[iFrame]</td>
                                 <td class="border px-4 py-2">
                                     <div class="flex items-center">
                                                                                 <input type="text" id="tvEmbed13" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://topembed.pw/channel/TNTSports2[UK]" readonly>
@@ -176,7 +216,7 @@
                                 </td>
                             </tr>
                                                                                 <tr class="hover:bg-gray-100">
-                                <td class="border px-4 py-2">TNTSports3[UK]</td>
+                                <td class="border px-4 py-2">TNTSports3[iFrame]</td>
                                 <td class="border px-4 py-2">
                                     <div class="flex items-center">
                                                                                 <input type="text" id="tvEmbed15" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://topembed.pw/channel/TNTSports3[UK]" readonly>
@@ -185,7 +225,7 @@
                                 </td>
                             </tr>
                                                                                 <tr class="hover:bg-gray-100">
-                                <td class="border px-4 py-2">TNTSports4[UK]</td>
+                                <td class="border px-4 py-2">TNTSports4[iFrame]</td>
                                 <td class="border px-4 py-2">
                                     <div class="flex items-center">
                                                                                 <input type="text" id="tvEmbed16" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://topembed.pw/channel/TNTSports4[UK]" readonly>
@@ -193,8 +233,44 @@
                                     </div>
                                 </td>
                             </tr>
+						                                                                                <tr class="hover:bg-gray-100">
+                                <td class="border px-4 py-2">TNTSports1[WEB]</td>
+                                <td class="border px-4 py-2">
+                                    <div class="flex items-center">
+                                                                                <input type="text" id="tvEmbed012" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://thedaddy.to/embed/stream-31.php" readonly>
+                                        <button onclick="copyToClipboard('tvEmbed012', this)" class="ml-2 bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-700 copy-btn">Copy</button>
+                                    </div>
+                                </td>
+                            </tr>
                                                                                 <tr class="hover:bg-gray-100">
-                                <td class="border px-4 py-2">PremierSports1[UK]</td>
+                                <td class="border px-4 py-2">TNTSports2[WEB]</td>
+                                <td class="border px-4 py-2">
+                                    <div class="flex items-center">
+                                                                                <input type="text" id="tvEmbed013" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://thedaddy.to/embed/stream-32.php" readonly>
+                                        <button onclick="copyToClipboard('tvEmbed013', this)" class="ml-2 bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-700 copy-btn">Copy</button>
+                                    </div>
+                                </td>
+                            </tr>
+                                                                                <tr class="hover:bg-gray-100">
+                                <td class="border px-4 py-2">TNTSports3[WEB]</td>
+                                <td class="border px-4 py-2">
+                                    <div class="flex items-center">
+                                                                                <input type="text" id="tvEmbed015" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://thedaddy.to/embed/stream-33.php" readonly>
+                                        <button onclick="copyToClipboard('tvEmbed015', this)" class="ml-2 bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-700 copy-btn">Copy</button>
+                                    </div>
+                                </td>
+                            </tr>
+                                                                                <tr class="hover:bg-gray-100">
+                                <td class="border px-4 py-2">TNTSports4[WEB]</td>
+                                <td class="border px-4 py-2">
+                                    <div class="flex items-center">
+                                                                                <input type="text" id="tvEmbed016" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://thedaddy.to/embed/stream-34.php" readonly>
+                                        <button onclick="copyToClipboard('tvEmbed016', this)" class="ml-2 bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-700 copy-btn">Copy</button>
+                                    </div>
+                                </td>
+                            </tr>
+                                                                                <tr class="hover:bg-gray-100">
+                                <td class="border px-4 py-2">PremierSports1[iFrame]</td>
                                 <td class="border px-4 py-2">
                                     <div class="flex items-center">
                                                                                 <input type="text" id="tvEmbed17" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://topembed.pw/channel/PremierSports1[UK]" readonly>
@@ -203,7 +279,7 @@
                                 </td>
                             </tr>
                                                                                 <tr class="hover:bg-gray-100">
-                                <td class="border px-4 py-2">PremierSports2[UK]</td>
+                                <td class="border px-4 py-2">PremierSports2[iFrame]</td>
                                 <td class="border px-4 py-2">
                                     <div class="flex items-center">
                                                                                 <input type="text" id="tvEmbed18" class="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-1 embed-field" value="https://topembed.pw/channel/PremierSports2[UK]" readonly>
@@ -1712,6 +1788,12 @@
                 </table>
           
 	</div>
+	<div class="grid-item"><a target="github" href="https://thedaddy.to/embed/stream-136.php"><span style="color: #000000;"><strong>Матч! Футбол 1 Russia</strong></span></a></div>
+<div class="grid-item"><a target="github" href="https://thedaddy.to/embed/stream-137.php"><span style="color: #000000;"><strong>Матч! Футбол 2 Russia</strong></span></a></div>
+<div class="grid-item"><a target="github" href="https://thedaddy.to/embed/stream-138.php"><span style="color: #000000;"><strong>Матч! Футбол 3 Russia</strong></span></a></div>
+<div class="grid-item"><a target="github" href="https://thedaddy.to/embed/stream-573.php"><span style="color: #000000;"><strong>Матч! Премьер Russia</strong></span></a></div>
+<div class="grid-item"><a target="github" href="https://thedaddy.to/embed/stream-127.php"><span style="color: #000000;"><strong>Матч! ТВ Russia</strong></span></a></div>
+<div class="grid-item"><a target="github" href="https://thedaddy.to/embed/stream-395.php"><span style="color: #000000;"><strong>МАТЧ! БОЕЦ Russia</strong></span></a></div>
     <script>
         function filterByTournament(select) {
             const urlParams = new URLSearchParams(window.location.search);
