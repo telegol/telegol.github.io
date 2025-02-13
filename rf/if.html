@@ -33,36 +33,32 @@
     </script>
 </head>
 <body>
-<iframe id="embed_HTML_container_ID" name="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" scrolling="no" allow="autoplay" encrypted-media; picture-in-picture; frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-	<script>
-	var iframe = document.querySelector('iframe');
-
-// Player options
-var options = {
-  containerid: 'embed_HTML_container_ID',
-  mediaid: 'https://p2plive2.top/stream/live/footballru.html',
-};
-
-// Get the Player object from the iframe
-var player = new screen9.Player(options);
-
-// Please note that some browsers block play method when video is not muted.
-player.setMute(true);
-
-player.on('play', function() {
-  console.log('play the video!');
-});
-
-player.play().then(function() {
-  console.log('The player starts playing video.');
-  setTimeout(function(){
-    //pause the player after 8 sec.
-    player.pause();
-  }, 8000);
-}).catch(function(error) {
-  // Please note that some browsers block play method without user interactions
-  console.log('Something went wrong. Error: ' + error);
-});
+		<script>
+function redirect()
+{
+optionsLinks = new Array('', 'test1', 'test2', 'https://p2plive2.top/stream/live/footballru.html', 'test4.html');
+if (document.myform.options.selectedIndex > 0)
+window.frame.location.href = optionsLinks[document.myform.options.selectedIndex];
+}
 </script>
+<div class="ac">
+<form name="myform">
+<table>
+<tr>
+<td>
+<select name="options">
+<option>———————</option>
+<option value="test1">Link to Test 1</option>
+<option value="test2">Link to Test 2</option>
+<option value="test3">Link to Test 3</option>
+<option value="test4">Link to Test 4</option>
+</select>
+</td>
+<td><input type="button" value="Go" onClick="redirect()"></td>
+</tr>
+</table>
+</form>
+<iframe src="test2" name="frame" id="myIframe" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" scrolling="no" allow="autoplay" encrypted-media; picture-in-picture; frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+	</div>
 </body>
 </html>
