@@ -38,30 +38,18 @@
 		<style>
 						.overlay {
         position: absolute;
-        right: 4px; /* Position adjusted to the top right corner */
-        top: 8px;
+        right: 10px; /* Position adjusted to the top right corner */
+        top: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 9999;
 }
-		#iframe-container {
-  position: relative; 	
+		#myIframe {
+  position: relative; 
   z-index: 0;
 }
-	#headerPopup{
-  width:75%;
-  margin:0 auto;
-}
-
-#headerPopup iframe{
-  width:100%;
-  margin:0 auto;
-}
-div.container { background: transparent; }
-iframe.lockframe { z-index: -2; }
-
-			.main {
+		.main {
 	width: 100%;
 	height: 100vh;
 	padding: 5%;
@@ -74,8 +62,8 @@ iframe.lockframe { z-index: -2; }
 }
 
 #da,.fs-btn{
-        width: 80px; /* Reduced width from 160px to 80px */
-        height: 40px; /* Reduced height from 120px to 40px */
+        width: 100px; /* Reduced width from 160px to 100px */
+        height: 80px; /* Reduced height from 120px to 80px */
         background: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(10px);
         border-radius: 10px;
@@ -199,6 +187,7 @@ span.i {
 				<div class="button-bar">
 					<button id="da">Disabled Ads</button>
 					<button class="fs-btn" onclick="toggleFullscreen()">Fullscreen</button>
+					<div class="close-popup" id="closeBtn"><a target="github" href="#">[ X ]</a></div>
 			</div>
 				</div>
     <form id="iframe-generator-form">
@@ -210,21 +199,15 @@ span.i {
         required
       />
       <br>
-	  <label for="width-input">Width:</label>
-      <input type="number" id="width-input" value="480" min="1" required />
-      <br>
-      <label for="height-input">Height:</label>
-      <input type="number" id="height-input" value="320" min="1" required />
-      <br>
       <button type="submit">Generate Iframe</button>
     </form>
 
-		<div id="iframe-container"></div><br/>
+		<div id="iframe-container" class="myIframe"></div><br/>
 <div class="ac">&nbsp;&nbsp;<a href="http://tvzov.byethost7.com/.vscode/list.html" target="_blank" onClick="window.open('http://tvzov.byethost7.com/.vscode/list.html','list','resizable,width=680,height=380'); return false;" title="list"><span class="i2">&nbsp;&#x25b6; LIST</span></a></div>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 				<script>
-const iframe = document.getElementById('iframe-container');
+const iframe = document.getElementById('myIframe');
 const main = document.getElementById('main');
 function toggleFullscreen() {
 	if (!document.fullscreenElement) {
