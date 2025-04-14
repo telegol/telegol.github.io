@@ -1,8 +1,5 @@
 #EXTM3U
 
-https://v1.thetvapp.to/hls/FoxNewsChannel/index.m3u8
-https://cdn.ntv.ru/th_style/playlist.m3u8
-https://cdn.ntv.ru/th_serial/playlist.m3u8
 https://7pal.short.gy/usanetwork
 https://7pal.short.gy/espnus
 https://7pal.short.gy/espn2
