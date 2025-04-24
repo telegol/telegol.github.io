@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+ 
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+  <title>t e l e 3 O B</title>
+  
+  
+  
+  
+<style>
+::-webkit-scrollbar {
+  width: 13px; // to adjust width
+}
+
+::-webkit-scrollbar-track {
+ 
+  -webkit-box-shadow: inset 1px 1px 2px #E0E0E0;
+  border: 11px solid #D8D8D8; //color of the track of scroll bar
+}
+
+::-webkit-scrollbar-thumb {
+  background: #646464;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #888;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;   
+}
+/*mobile mode*/
+@media only screen and (max-width:480px) {
+ul {
+  position: fixed;
+  display: block;
+  margin-left: 20px;
+  margin-top: 35vw;
+  z-index: 3;
+}
+.nav {
+  position: fixed;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  transform: rotate(-90deg);
+  margin-left: 0px;
+  margin-top: 15vw;
+  letter-spacing: 0.2vw;
+  z-index: 3;
+}
+li {
+  content:'';
+  height: 40px;
+  width: 5px;
+  transition: width 0.3s ease-in-out;
+}  
+li:hover  {
+   transition: width 0.3s ease-in-out;
+   width: 8.3vw;
+}
+#eyes {background-color:#7e8cdd;}
+#full {background-color:#302c2d;}
+#shine {background-color:#7c7b76;}
+#barry {background-color:#38434b;}
+#orange {background-color:orange;}
+#strange {background-color:#494746;}
+#space {background-color:#c7c7c7;}
+#lol {background-color:#f26667;}
+#sparta {background-color:#e32001;}
+#kill {background-color:#5e5e5e;}
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+section .cover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section .cover img #hero{
+  position: absolute;
+  display: block;
+  min-width: 150%;
+  min-height: 150%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section .content {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+section .text {
+  width: 100%;
+}
+.centralize {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateZ(0px) translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+#hero {
+  position: absolute;
+  padding-top: 70vw;
+  margin-left: 15vw;
+  width: 70vw;
+  overflow: hidden;
+  -webkit-animation: rotation 40s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+img {
+  width: 100%;
+}
+#title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9vw;
+  margin-top: 31vw;
+  margin-left: 17vw;
+  line-height: 6vw;
+  color: #302c2d;
+  opacity: 1;
+  animation: move 5s
+}
+@keyframes move {
+    from {
+      margin-top: 13vw;
+      opacity: 0.2;
+    }
+     to {
+      margin-top: 31vw;
+      opacity: 1;
+    }
+  }
+.name {
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 2.9vw;
+  letter-spacing: 0.1vw;
+  margin-top: 5vw;
+  margin-left: 17vw;
+}
+#line {
+  position: absolute;
+  content:'';
+  margin-top: -21vw;
+  margin-left: 55vw;
+  height: 1px;
+  width: 28vw;
+  background-color: #302c2d;
+  z-index: 5;
+  animation: expand 3s;
+  animation-fill-mode: forwards;     
+}
+ @keyframes expand {
+    from {
+      width: 0vw;
+      opacity: 0;
+    }
+     to {
+      width: 28vw;
+      opacity: 1;
+    }
+  }
+.scroll {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  font-weight: 900;
+  letter-spacing: 0.3vw;
+  color: #302c2d;
+  margin-left: 30vw;
+  margin-top: 70vw;
+}
+.square {
+  position: relative;
+  content:'';
+  float: right;
+  height: 120vh;
+  width: 100vh;
+
+}
+.copy {
+  width: 70vw;
+  margin-left: 18vw;
+  margin-top: 30vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8vw;
+  line-height: 3.4vw;
+  letter-spacing: 0.3vw;
+  color: black;
+}
+ #eyes2 {
+  background: linear-gradient(to bottom right, #00e3df, #f63adb);
+}
+.poster {
+  width: 70vw;
+  margin-top: 4vw;
+  margin-left: 18vw;
+  z-index: 1;
+}
+  #metal {
+    color: #dddddd;
+  }
+  #shine1 {
+    color: #ffffff;
+  }
+  #lyndon {
+    color: #b7b7ae;
+  }
+   #love {
+    color: #ecdbec;
+  }
+    #ita {
+    color: #ffffff;
+  }
+}
+/*desktop mode*/
+@media only screen and (min-width:1000px) {
+ul {
+  position: fixed;
+  display: block;
+  margin-left: 37px;
+  margin-top: 7vw;
+  z-index: 3;
+}
+.nav {
+  position: fixed;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85vw;
+  transform: rotate(-90deg);
+  margin-left: 1vw;
+  margin-top: 3vw;
+  letter-spacing: 0.2vw;
+  z-index: 3;
+}
+li {
+  content:'';
+  height: 40px;
+  width: 5px;
+  transition: width 0.3s ease-in-out;
+}  
+li:hover  {
+   transition: width 0.3s ease-in-out;
+   width: 80px;
+}
+#eyes {background-color:#7e8cdd;}
+#full {background-color:#302c2d;}
+#shine {background-color:#7c7b76;}
+#barry {background-color:#38434b;}
+#orange {background-color:orange;}
+#strange {background-color:#494746;}
+#space {background-color:#c7c7c7;}
+#lol {background-color:#f26667;}
+#sparta {background-color:#e32001;}
+#kill {background-color:#5e5e5e;}
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60vw;
+  overflow: hidden;
+}
+section .cover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section .cover img #hero{
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section .content {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+section .text {
+  width: 100%;
+}
+.centralize {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateZ(0px) translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+#hero {
+  position: absolute;
+  padding-top: -9vw;
+  margin-left: 50vw;
+  width: 38vw;
+  overflow: hidden;
+  -webkit-animation: rotation 180s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+img {
+  width: 100%;
+}
+#title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.31vw;
+  margin-top: 9vw;
+  margin-left: 10vw;
+  line-height: 2.63vw;
+  color: #302c2d;
+  opacity: 1;
+  animation: move 3s
+}
+@keyframes move {
+    from {
+      margin-left: 8vw;
+      opacity: 0.3;
+    }
+     to {
+      margin-left: 10vw;
+      opacity: 1;
+    }
+  }
+.name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+  letter-spacing: 0.25vw;
+  margin-top: 2.63vw;
+  margin-left: 10.1vw;
+}
+#line {
+  position: absolute;
+  content:'';
+  margin-top: -10vw;
+  margin-left: 28vw;
+  height: 1px;
+  width: 13.68vw;
+  background-color: #302c2d;
+  z-index: 5;
+  animation: expand 3s;
+  animation-fill-mode: forwards;     
+}
+ @keyframes expand {
+    from {
+      width: 0vw;
+      opacity: 0;
+    }
+     to {
+      width: 13.68vw;
+      opacity: 1;
+    }
+  }
+.scroll {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.80vw;
+  font-weight: 900;
+  letter-spacing: 0.1vw;
+  color: #302c2d;
+  margin-left: 45vw;
+  margin-top: 20vw;
+}
+.square {
+  position: relative;
+  content:'';
+  float: right;
+  height: 120vh;
+  width: 100vh;
+
+}
+.copy {
+  float: left;
+  width: 29.28vw;
+  margin-left: 13vw;
+  margin-top: 4vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.31vw;
+  line-height: 2vw;
+  letter-spacing: 0.2vw;
+  color: black;
+}
+ #eyes2 {
+  background: linear-gradient(to bottom right, #00e3df, #f63adb);
+}
+.poster {
+  overflow: hidden;
+  width: 29.28vw;
+  margin-top: 6vw;
+  margin-left: 61vw;
+  z-index: 1;
+}
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <html>
+  <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,900');
+    </style>
+  </head>
+  <body>
+    <div class='nav'>MENU</div>
+    <ul>
+   <a href='#sctr1'><li id='eyes'></li></a>
+   <a href='#sctr2'><li id='full'></li></a> 
+   <a href='#sctr3'><li id='shine'></li></a>
+   <a href='#sctr4'><li id='barry'></li></a>
+   <a href='#sctr5'><li id='orange'></li></a>
+   <a href='#sctr6'><li id='space'></li></a>
+   <a href='#sctr7'><li id='strange'></li></a>
+   <a href='#sctr8'><li id='lol'></li></a> 
+   <a href='#sctr9'><li id='sparta'></li></a>  
+   <a href='#sctr10'><li id='kill'></li></a>
+    </ul>
+    <section class="special" data-scrollax-parent="true" id='ntr'>
+  <div class="cover" id='hero' data-scrollax="properties: { translateY: '30%', 'opacity': 1.5 }">
+    
+   <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/679318/tesseract.jpg'></div>
+  <div class="content"> 
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+       <div id="title">
+        Stanley Kubrick<br><br>
+       13 films<br><br>13 visual essays
+       </div>
+       <div class="name">designed & coded by yiannis papadopoulos</div> 
+       <div id="line"></div>
+       <div class="scroll">SCROLL to              EXPLORE</div> 
+      </div>
+     </div>
+    </div>
+   </section>
+    <section class="special" data-scrollax-parent="true" id='sctr1'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='eyes2'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy'> According to the legend there is a cauldron full of money where the rainbow ends; An economic environment of extreme wealth and power is the place the story unfolds. Moreover, almost every set of the film, is decorated by a glowing Christmas tree. The pattern-a tree turned upside down-works as tree's negative, in its dark cloudy background, it indicates that there is nothing fairy in this tale.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/8a/bb/9b/8abb9bd65e06d7fd336f426d7a6c678e.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <section class="special" data-scrollax-parent="true" id='sctr2'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='full'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy' id='metal'> In Kubrick's work, first scene always matters. In this case, a group of newly enlisted guys have their hair cut. Men are homogenized within the macho military culture, their brains symbolically get prepared for washing, individuality is lost. Ironically, only before the end, is it revealed, that the deadly vietnamese sniper, is not but a young girl with long hair in braids. The pair of hair clippers (proper for sheep shearing) embodied for me, all this sense of violence.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/09/54/fa/0954fa997903c4f02a18647e27be0fdb.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr3'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='shine'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy' id='shine1'> "Shining" is approached as a fairy tale. Father is presented as the big bad wolf. His son possesses the shining: an array of psychic abilities that allow him to see the hotel's horrific past. Boy's shiny hair send a beam to be consumed into father's darkness. The hotel, with its Gothic design, enhances the fairy tale quality of the composition becoming the forth character of the poster.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/11/40/b3/1140b366433f981d0512fa6b7c6c6483.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr4'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='barry'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy' id='lyndon'>After watching Barry Lyndon, you realize that you have felt no sympathy at all, for the hero. You've been a distant observer of his adventures. That was Kubrick's intention. The framed picture works as a symbol of the film. Its glass cover reflects, director's lens, through which, he invites you to examine hero, as a rare species. Butterflies were chosen to represent Barry Lyndon himself, an opportunist that masquerades and transforms himself to climb on the upper levels of society.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/ea/4c/ea/ea4ceae06d84f7468280ab6a70e6ef38.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr5'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='orange'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy'>Plug ins penetrate the orange flesh - conditions and rules imposed by the authorities on the revolting and often violent youth. Behavioral modification, so queer as a clockwork orange.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/0a/d7/7e/0ad77ed3394095609c3f9fb72f7f08e2.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr6'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='space'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy'>The key to find my way through this multi layered film, was its subtitle "a space odyssey". Space already indicates the three dimensions but "odyssey" reflects the forth one, time. The object depicted, a hypercube, illustrates these four dimensions. It is the spread of a four dimensional cube in three dimensions. The hypercube floating in space, tries to evoke the feeling of the movie spaceship whirling in the universe.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/e2/82/ed/e282edd1dd7c0387e658586293b68f5f.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr7'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='strange'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy' id='love'>Dr.Strangelove is a cruel satire on the Cold War and the fear of nuclear attack. Even more, it's sexually layered to our amusement. Within this framework leaderships suffer from sexual incompetence. War works as a substitute and weapons as adult toys. In the composition a vibrator is placed between an aircraft and a bullit. Similarities are striking.  </div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/f7/ec/7e/f7ec7e23fd2c9e071dbadaa1a73852e4.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr8'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='lol'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy' id='ita'>The first image in a Kubrick film is always important. In this case, we see a manly hand polishing a girl's nail toes. An adult, submissive, enjoys being at the services of a 12 years old, that becomes in his mind an almost divine creature. The nail polish brash, reflects this relationship of obsession.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/39/e8/95/39e895d285918800e288bc5ac6c9e5df.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr9'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='sparta'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+        <div class='copy' id='ita' >We first meet Spartacus, a slave, in a mine yard. He is smashing rocks, the raw material for the monumental buildings of the Roman empire, symbols of its grandeur. Spartacu's revolt against it, is reflected in a piece of rock smashed in two pieces, a crusial hit in the foundations of tyrrany.</div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/c0/4b/b7/c04bb782c26db14a15dd8663cb84e8ba.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="special" data-scrollax-parent="true" id='sctr10'>
+  <div class="cover" data-scrollax="properties: { translateY: '30%' }">
+ <div class='square' id='kill'></div>
+  </div>
+  <div class="content">
+    <div class="text centralize">
+      <div data-scrollax="properties: { 'translateY': '150%', 'opacity':1.5 }">
+        <div class='copy' id='ita'>The film concerns an elaborate racetrack robbery-signaled by the killing of a race horse-described through a series of boxes & doors opening & closing. It's a heist, a chess game of accuracy and timing. The film could be seen as a box machine, with a chess clock button setting the clock, the knights and the robbery in motion.  </div>
+        <div class='poster'>
+        <img src='https://i.pinimg.com/originals/60/9e/f0/609ef056c92e0e32a19a9ba5748007ca.jpg'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </body>
+</html>
+  <script src='//iprodev.github.io/Scrollax.js/assets/js/jquery.min.js'></script>
+<script src='//iprodev.github.io/Scrollax.js/assets/js/smoothscroll.js'></script>
+<script src='//iprodev.github.io/Scrollax.js/lib/scrollax.min.js'></script>
+      <script id="rendered-js" >
+jQuery(document).ready(function ($) {
+  'use strict';
+
+  $.Scrollax();
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
